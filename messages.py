@@ -22,6 +22,7 @@ def mac_str_to_bytes(mac_str):
 
 TYPE_HELLO = 'HELLO'
 TYPE_ACCEPTED = 'ACCEPTED'
+TYPE_POTENSIOMETER_VALUE_CHANGED = 'POTENSIOMETER_VALUE_CHANGED'
 
 
 class Message:
@@ -52,3 +53,9 @@ class Accepted(Message):
     def __init__(self, sender=None, original_type=None):
         payload = {'original_type': original_type}
         super().__init__(TYPE_ACCEPTED, sender, payload)
+
+
+class PotensiometerValueChanged(Message):
+    def __init__(self, index, value):
+        payload = {'index': index, 'value': value}
+        super().__init__(TYPE_POTENSIOMETER_VALUE_CHANGED, payload)

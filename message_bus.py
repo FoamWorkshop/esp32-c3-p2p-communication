@@ -115,7 +115,7 @@ class MessageBus:
         self._esp_send(bcast, hello.to_bytes())
 
         # poll for replies for a short time
-        wait_ms = 20000
+        wait_ms = 5000
         interval_ms = 500
         waited = 0
         while waited < wait_ms:
