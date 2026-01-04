@@ -52,13 +52,3 @@ class Accepted(Message):
     def __init__(self, sender=None, original_type=None):
         payload = {'original_type': original_type}
         super().__init__(TYPE_ACCEPTED, sender, payload)
-
-
-# Encoder value changed message
-TYPE_ENCODER_VALUE_CHANGED = 'ENCODER_VALUE_CHANGED'
-
-
-class EncoderValueChanged(Message):
-    def __init__(self, sender=None, value=0):
-        payload = {'value': value}
-        super().__init__(TYPE_ENCODER_VALUE_CHANGED, sender, payload)
