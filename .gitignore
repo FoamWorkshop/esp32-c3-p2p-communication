@@ -102,3 +102,4 @@ Thumbs.db
 .venv
 
 scripts
+pyvenv.cfg
